@@ -36,6 +36,7 @@ class Controller {
             })
     }
     static create (req, res){
+        req.body.UserId = req.decode.id
         Todo
             .create(req.body)
             .then(() => {
